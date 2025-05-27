@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f9f9f9;
+}
+
+.main-wrapper {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ddd;
+}
+
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 15px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  resize: vertical;
+  margin-bottom: 20px;
+  background: #f7f7f7;
+  color: #333;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background: #00cec9;
+  color: white;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 206, 201, 0.4);
+}
+
+button:hover {
+  background: #00b8b2;
+  box-shadow: 0 6px 16px rgba(0, 206, 201, 0.6);
+  transform: scale(1.05);
+}
+
+#result {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(0, 255, 255, 0.08);
+  border-left: 5px solid #00cec9;
+  border-radius: 10px;
+}
+
+#result p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #fff;
+}
+
+.error {
+  margin-top: 15px;
+  color: #ff7675;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Assistant styling */
+#assistant {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 20px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+#assistant img {
+  height: 80px;
+  margin-right: 15px;
+  border-radius: 50%;
+}
+
+.chat-bubble {
+  background-color: #ffffff10;
+  padding: 12px 20px;
+  border-radius: 16px;
+  max-width: 60%;
+  color: #f1f1f1;
+  font-size: 15px;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+}

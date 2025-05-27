@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Fake News Detector</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" />
+</head>
+<body>
+    <div class="main-wrapper animate__animated animate__fadeIn">
+        <div class="card">
+            <h1 class="animate__animated animate__fadeInDown">🕵️ Fake News Detector</h1>
+            <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">
+                Paste a news snippet to verify its authenticity.
+            </p>
+            <form id="predict-form" class="animate__animated animate__fadeInUp animate__delay-2s">
+                <textarea id="text-input" placeholder="Type or paste your news here..." required></textarea>
+                <button type="submit">🔍 Analyze</button>
+            </form>
+            <div id="assistant">
+                <img src="{{ url_for('static', filename='images/assistant.png') }}" alt="Assistant"/>
+                <div class="chat-bubble">Analyzing<span id="dots">...</span></div>
+            </div>
+            <div id="result" class="hidden animate__animated animate__fadeInUp">
+                <h2>🧠 Result</h2>
+                <p><strong>Prediction:</strong> <span id="prediction"></span></p>
+                <p><strong>Confidence:</strong> <span id="confidence"></span></p>
+            </div>
+            <div id="error-message" class="error hidden animate__animated animate__shakeX"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
